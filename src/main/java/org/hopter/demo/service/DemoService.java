@@ -8,11 +8,11 @@ import org.hopter.framework.annotation.Service;
  */
 @Service
 public class DemoService {
-    public String getSomething() {
-        return "demo: service get something!";
+    public String getView() {
+        return "demo: service get view!";
     }
 
-    public String postSomething() {
-        return "demo: service post something!";
+    public String redirect() {
+        return "demo: service redirect!";
     }
 }
