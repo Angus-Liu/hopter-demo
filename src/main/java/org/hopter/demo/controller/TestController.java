@@ -22,7 +22,7 @@ public class TestController {
     private TestService service;
 
     @Action(method = RequestMethod.GET, path = "/test")
-    public Data getData(Param param) {
+    public Data getData() {
         Map<String, String> map = new HashMap<>();
         String something = service.getSomething();
         map.put("get", something);
@@ -30,7 +30,7 @@ public class TestController {
     }
 
     @Action(method = RequestMethod.POST, path = "/test")
-    public Data postData(Param param) {
+    public Data postData() {
         Map<String, String> map = new HashMap<>();
         String something = service.postSomething();
         map.put("post", something);

@@ -4,7 +4,6 @@ import org.hopter.demo.service.DemoService;
 import org.hopter.framework.annotation.Action;
 import org.hopter.framework.annotation.Controller;
 import org.hopter.framework.annotation.Inject;
-import org.hopter.framework.bean.Param;
 import org.hopter.framework.bean.View;
 import org.hopter.framework.enums.RequestMethod;
 
@@ -19,13 +18,13 @@ public class DemoController {
     private DemoService service;
 
     @Action(method = RequestMethod.GET, path = "/view")
-    public View getView(Param param) {
+    public View getView() {
         service.getView();
         return new View("hello.jsp");
     }
 
     @Action(method = RequestMethod.GET, path = "/redirect")
-    public View redirect(Param param) {
+    public View redirect() {
         service.redirect();
         return new View("/test");
     }

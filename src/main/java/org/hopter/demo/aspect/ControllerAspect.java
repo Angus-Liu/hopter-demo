@@ -15,7 +15,9 @@ import java.lang.reflect.Method;
 @Aspect(Controller.class)
 public class ControllerAspect extends AspectProxy {
     @Override
-    public void before(Class<?> cls, Method method, Object[] params) throws Throwable {
-        log.info("拦截到 Controller 请求了 -> {}.{}", cls.getName(), method.getName());
+    public void before(Class<?> cls, Method method, Object[] params) {
+        if (!"toString".equals(method.getName()) && !"hashCode".equals(method.getName())) {
+            log.info("拦截到 Controller 请求了 -> {}.{}", cls.getName(), method.getName());
+        }
     }
 }
