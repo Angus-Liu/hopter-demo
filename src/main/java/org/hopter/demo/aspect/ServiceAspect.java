@@ -17,7 +17,7 @@ public class ServiceAspect extends AspectProxy {
     @Override
     public void before(Class<?> cls, Method method, Object[] params) {
         if (!"toString".equals(method.getName()) && !"hashCode".equals(method.getName())) {
-            log.info("拦截到 Service 请求了 -> {}.{}", cls.getName(), method.getName());
+            log.info("Service -> {}.{}", cls.getName(), method.getName());
         }
     }
 }
