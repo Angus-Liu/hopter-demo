@@ -21,14 +21,12 @@ public class DemoController {
 
     @Action(method = RequestMethod.GET, path = "/param")
     public Data getParam(Param param) {
-        service.getView();
         System.out.println(param);
         return new Data(param.getFieldMap());
     }
 
     @Action(method = RequestMethod.POST, path = "/param")
     public Data postParam(Param param) {
-        service.getView();
         System.out.println(param);
         return new Data(param.getFieldMap());
     }
