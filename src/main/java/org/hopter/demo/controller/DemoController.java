@@ -8,6 +8,8 @@ import org.hopter.framework.bean.Data;
 import org.hopter.framework.bean.Param;
 import org.hopter.framework.bean.View;
 import org.hopter.framework.enums.RequestMethod;
+import org.hopter.framework.helper.ServletHelper;
+import org.hopter.plugin.security.annotation.User;
 
 /**
  * @author Angus
@@ -31,6 +33,7 @@ public class DemoController {
         return new Data(param.getFieldMap());
     }
 
+    @User
     @Action(method = RequestMethod.GET, path = "/view")
     public View getView() {
         service.getView();

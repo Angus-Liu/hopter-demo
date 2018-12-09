@@ -18,6 +18,11 @@
             <artifactId>hopter-framework</artifactId>
             <version>1.0.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.hopter</groupId>
+            <artifactId>hopter-plugin-security</artifactId>
+            <version>1.0.0</version>
+        </dependency>
         <!-- JUnit -->
         <dependency>
             <groupId>junit</groupId>
