@@ -11,22 +11,31 @@
 
     <name>Hopter demo webapp</name>
 
+    <properties>
+        <version.hopter>1.0.0</version.hopter>
+    </properties>
+
     <dependencies>
         <!-- Hopter Framework -->
         <dependency>
             <groupId>org.hopter</groupId>
             <artifactId>hopter-framework</artifactId>
-            <version>1.0.0</version>
+            <version>${version.hopter}</version>
         </dependency>
         <dependency>
             <groupId>org.hopter</groupId>
             <artifactId>hopter-plugin-security</artifactId>
-            <version>1.0.0</version>
+            <version>${version.hopter}</version>
         </dependency>
         <dependency>
             <groupId>org.hopter</groupId>
             <artifactId>hopter-plugin-soap</artifactId>
-            <version>1.0.0</version>
+            <version>${version.hopter}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hopter</groupId>
+            <artifactId>hopter-plugin-rest</artifactId>
+            <version>${version.hopter}</version>
         </dependency>
         <!-- JUnit -->
         <dependency>
