@@ -4,6 +4,9 @@ import lombok.Data;
 
 /**
  * 客户
+ *
+ * @author Angus
+ * @date 2018/12/11
  */
 @Data
 public class Customer {

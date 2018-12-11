@@ -7,7 +7,6 @@ import org.hopter.framework.bean.Param;
 import org.hopter.framework.bean.View;
 import org.hopter.framework.enums.RequestMethod;
 import org.hopter.plugin.security.SecurityHelper;
-import org.hopter.plugin.security.annotation.User;
 import org.hopter.plugin.security.exception.AuthcException;
 
 /**
