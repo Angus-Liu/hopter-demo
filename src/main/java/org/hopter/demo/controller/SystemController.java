@@ -7,6 +7,7 @@ import org.hopter.framework.bean.Param;
 import org.hopter.framework.bean.View;
 import org.hopter.framework.enums.RequestMethod;
 import org.hopter.plugin.security.SecurityHelper;
+import org.hopter.plugin.security.annotation.User;
 import org.hopter.plugin.security.exception.AuthcException;
 
 /**
@@ -20,9 +21,7 @@ import org.hopter.plugin.security.exception.AuthcException;
 public class SystemController {
 
     /**
-     * 进入首页
-     *
-     * @return
+     * 进入首界面
      */
     @Action(method = RequestMethod.GET, path = "/")
     public View index() {
@@ -30,12 +29,18 @@ public class SystemController {
     }
 
     /**
+     * 进入登录界面
+     */
+    @Action(method = RequestMethod.GET, path = "/login")
+    public View login() {
+        return new View("login.jsp");
+    }
+
+    /**
      * 提交登录表单
-     *
-     * @return
      */
     @Action(method = RequestMethod.POST, path = "/login")
-    public View login(Param param) {
+    public View loginSubmit(Param param) {
         String username = param.getString("username");
         String password = param.getString("password");
         try {
@@ -44,17 +49,15 @@ public class SystemController {
             log.error("login failure", e);
             return new View("/login");
         }
-        return new View("/custom");
+        return new View("/customer");
     }
 
     /**
-     * 注销
-     *
-     * @return
+     * 提交注销请求
      */
+    @Action(method = RequestMethod.GET, path = "/logout")
     public View logout() {
         SecurityHelper.logout();
         return new View("/");
     }
-
 }
